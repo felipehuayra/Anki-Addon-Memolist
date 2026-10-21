@@ -1,0 +1,22 @@
+<div class="pc-question">{{Pergunta}}</div>
+
+<div id="pc-source" style="display:none">{{Itens}}</div>
+<ol id="pc-list"></ol>
+
+{{#Observações}}<div class="pc-notes">{{Observações}}</div>{{/Observações}}
+
+<script>
+(function () {
+  var src = document.getElementById("pc-source");
+  var list = document.getElementById("pc-list");
+  var parts = (src ? src.innerHTML : "").split(/<br\s*\/?>|<\/div>|<\/p>|<\/li>|\n/i);
+  for (var i = 0; i < parts.length; i++) {
+    var t = new DOMParser().parseFromString(parts[i], "text/html").body.textContent.trim();
+    if (t) {
+      var li = document.createElement("li");
+      li.textContent = t;
+      list.appendChild(li);
+    }
+  }
+})();
+</script>

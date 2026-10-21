@@ -1,0 +1,24 @@
+.card {
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: left;
+  max-width: 36em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+.pc-question { font-weight: bold; margin-bottom: 0.8em; }
+#pc-list { padding-left: 1.6em; margin: 0 0 1em 0; }
+#pc-list li { margin: 0.25em 0; }
+#pc-list li.pc-hidden { opacity: 0.45; }
+#pc-btn {
+  display: block;
+  width: 100%;
+  max-width: 20em;
+  min-height: 48px;
+  margin: 1em auto;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#pc-btn:disabled { opacity: 0.6; cursor: default; }
+.pc-notes { margin-top: 1em; font-size: 0.85em; opacity: 0.8; }
